@@ -7,7 +7,14 @@ create or replace campus_t  as object();
 --school
 
 --department
-
+create or replace type Department_t as object
+(
+dept_ID varchar2(20),
+dept_name varchar2(20),
+dept_head varchar2(20),
+dept_prof Prof
+);
+create or replace type Department_table_t as table of  Department_t;
 --research-center
 
 --faculty
